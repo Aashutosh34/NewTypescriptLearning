@@ -168,6 +168,8 @@ let newUser2:userType2={
 };
 
 console.log(newUser2);
+newUser2.salary=1800000;
+console.log(newUser2);
 //newUser2.name="Nikhil";    //Showing error becz above we assign name as readonly so can't change the value of name.
 //*******readonly is only applicable object and class variable.********
 
@@ -177,3 +179,18 @@ console.log('----------------------------------------------------------------');
 type orderIDType = string|number;
 let ordetID:orderIDType=1234;
 ordetID="Nike Shoe";
+
+
+
+type practice={readonly name:string;age:number;address:String,ID:number};
+
+
+let empDeatails:practice={
+name:"amit",
+age:31,
+address:"Lonand",
+ID:101
+};
+
+console.log(empDeatails);
+//empDeatails.name='Nikhil';     //gives error because name having readonly property. so can't change the name.
